@@ -7,7 +7,7 @@
 (function (root) {
   "use strict";
 
-  // TODO: replace with the real Stripe Payment Link (one-line swap)
+  // Live Stripe Payment Link ($7), redirects to /thanks-k7x2/
   var STRIPE_PAYMENT_LINK = "https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03";
 
   root.STL_CONFIG = {
