@@ -53,3 +53,4 @@ No `CLOUDFLARE_API_TOKEN`. Hosting is GitHub Pages from the public repo `evanmac
   - CNAME `www` → `evanmack45.github.io`
 
 - 2026-11-14 10:45 PM CT: swapped placeholder for live Stripe Payment Link https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03 (from Dash, $7, redirects to /thanks-k7x2/).
+- 2026-11-14 10:44 PM CT: added sharethislife.com as a pending verified domain in GitHub account Pages settings (not yet verified). Sent Dash TXT _github-pages-challenge-evanmack45 = a9b019233bb1a60e4e28e2480fa3af plus A/AAAA/CNAME records. Next: on Dash's ping, click Verify, enforce HTTPS, run done checklist.
