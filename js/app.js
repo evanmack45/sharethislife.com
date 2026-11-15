@@ -243,7 +243,7 @@
       '<aside class="locked-block" aria-label="More questions in this chapter">' +
         '<p>There are ' + count + " more questions in " + escapeHtml(chapterTitle) +
         " in the full booklet.</p>" +
-        '<p><a class="btn btn-primary" data-pay-link href="#STRIPE_LINK_PLACEHOLDER">Unlock all 100 questions — $7</a></p>' +
+        '<p><a class="btn btn-primary" data-pay-link href="https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03">Unlock all 100 questions — $7</a></p>' +
         '<!-- TODO: pay href comes from STRIPE_PAYMENT_LINK in js/config.js (one-line swap). -->' +
         '<p class="placeholder-note" data-pay-placeholder-note id="pay-placeholder-note" hidden>' +
           "The payment link isn't connected yet. This button is a placeholder." +
@@ -417,7 +417,7 @@
         (unlocked
           ? "<p>The full 100-question booklet is unlocked on this device.</p>"
           : "<p>The free booklet includes the 20 free questions. " +
-            '<a data-pay-link href="#STRIPE_LINK_PLACEHOLDER">Unlock all 100 questions — $7</a></p>' +
+            '<a data-pay-link href="https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03">Unlock all 100 questions — $7</a></p>' +
             '<!-- TODO: pay href comes from STRIPE_PAYMENT_LINK in js/config.js (one-line swap). -->' +
             '<p class="placeholder-note" data-pay-placeholder-note id="pay-placeholder-note" hidden>' +
             "The payment link isn't connected yet. This button is a placeholder.</p>") +

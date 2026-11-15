@@ -51,3 +51,5 @@ No `CLOUDFLARE_API_TOKEN`. Hosting is GitHub Pages from the public repo `evanmac
   - Apex A: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
   - Apex AAAA: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
   - CNAME `www` → `evanmack45.github.io`
+
+- 2026-11-14 10:45 PM CT: swapped placeholder for live Stripe Payment Link https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03 (from Dash, $7, redirects to /thanks-k7x2/).
