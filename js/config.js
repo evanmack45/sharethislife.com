@@ -1,7 +1,6 @@
 /* Share This Life — site config.
  *
- * TODO: replace STRIPE_PAYMENT_LINK with the real Stripe Payment Link.
- * That is a one-line swap. Do not create Stripe products from this repo.
+ * STRIPE_PAYMENT_LINK is the live $7 Stripe Payment Link (set Nov 14 2026).
  * After payment, Stripe should redirect to /thanks-k7x2/
  */
 (function (root) {
