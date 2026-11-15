@@ -34,3 +34,20 @@ No `CLOUDFLARE_API_TOKEN`. Hosting is GitHub Pages from the public repo `evanmac
 - Real Stripe Payment Link is not connected. The $7 button is a clearly marked placeholder.
 - Custom domain will not resolve until DNS is pointed at GitHub Pages (A / AAAA / www CNAME). That work was intentionally not done here.
 - Unlock after payment is honor-system only, as noted above.
+
+### Hosting results (still 2026-11-14, America/Chicago)
+- Public repo: https://github.com/evanmack45/sharethislife.com (main). No other repo or site was touched. DNS was not changed.
+- Pages was enabled from `main` `/` with no custom domain first. Status became `built`. `https://evanmack45.github.io/sharethislife.com/` returned **HTTP 200** (no redirect). CSS, JS, favicon, interview, cards, book, `/thanks-k7x2/`, 404.html, robots.txt, and og.png all returned 200. Proof screenshot: `shots/github-io-home-1280.png` (kept on the box; `shots/` is gitignored). Curl was taken around 10:40 PM CST, before the CNAME was set.
+- Then `CNAME` (contents: `sharethislife.com`) was committed and pushed, and the Pages API was updated with `cname=sharethislife.com`. GET `/repos/evanmack45/sharethislife.com/pages` afterward:
+
+```json
+{"url":"https://api.github.com/repos/evanmack45/sharethislife.com/pages","status":"built","cname":"sharethislife.com","custom_404":true,"html_url":"http://sharethislife.com/","build_type":"legacy","source":{"branch":"main","path":"/"},"public":true,"protected_domain_state":null,"pending_domain_unverified_at":null,"https_enforced":false}
+```
+
+- After that CNAME was set, `https://evanmack45.github.io/sharethislife.com/` still returned HTTP 200 (no redirect yet). The apex `sharethislife.com` still serves the Afternic lander (`window.location.href="/lander"`). Expected: DNS still points at Afternic nameservers.
+- `https_enforced` is false until DNS and the Pages certificate are in place. Do not flip that on until DNS is done.
+- Account-level Pages domain verification: there is no REST API for it. Official GitHub REST Pages endpoints are only `/repos/{owner}/{repo}/pages`, builds, deployments, and health. Probes of `user/pages/domains`, `pages/domains`, and `repos/.../pages/domains` returned 404. The TXT record `_github-pages-challenge-evanmack45.sharethislife.com` has to be created from GitHub profile Settings → Pages → Add a domain (the UI), not from `gh api`. No browser was used to try it.
+- DNS records GitHub Pages will need, when someone else is ready to move nameservers (confirmed against GitHub docs, "Managing a custom domain" and "Securing your GitHub Pages site with HTTPS"):
+  - Apex A: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+  - Apex AAAA: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+  - CNAME `www` → `evanmack45.github.io`
