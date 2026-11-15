@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Share This Life">
+  <rect width="64" height="64" rx="8" fill="#722A1F"/>
+  <rect x="14" y="12" width="36" height="40" rx="2" fill="#FFF9F1"/>
+  <rect x="14" y="12" width="6" height="40" fill="#E8DCCB"/>
+  <path d="M26 24h16M26 32h16M26 40h11" stroke="#221A14" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

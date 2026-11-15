@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Custom domain is the canonical home once DNS is pointed at GitHub Pages.

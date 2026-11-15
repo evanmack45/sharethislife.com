@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share This Life — Ask them before the holidays.</title>
+  <meta name="description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
+  <link rel="canonical" href="https://sharethislife.com/">
+  <meta name="theme-color" content="#F3EBE0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Share This Life">
+  <meta property="og:title" content="Share This Life — Ask them before the holidays.">
+  <meta property="og:description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
+  <meta property="og:url" content="https://sharethislife.com/">
+  <meta property="og:image" content="https://sharethislife.com/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Share This Life — Ask them before the holidays.">
+  <meta name="twitter:description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
+  <meta name="twitter:image" content="https://sharethislife.com/img/og.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html">Share This Life</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="interview.html">Interview</a>
+      <a href="cards.html">Table cards</a>
+      <a href="book.html">Print a book</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <hr class="ornament">
+      <h1>Ask them before the holidays.</h1>
+      <p class="lede">Sit down with a parent, a grandparent, or anyone whose stories you want to keep, and ask a few good questions before the season gets away from you.</p>
+      <p>Type what they say. If your browser allows it, you can also speak the answers out loud. Nothing is sent anywhere. It stays on this device.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="interview.html">Start an interview</a>
+        <a class="btn btn-quiet" href="cards.html">Print table cards</a>
+      </div>
+    </section>
+
+    <div class="home-sections">
+      <section class="home-card" aria-labelledby="free-title">
+        <h2 id="free-title">Twenty questions, free</h2>
+        <p>The first twenty questions are a complete short interview: childhood, family, love, work, hard times, lessons, and wishes. You can print the answers, and you can print a set of cards to pass around the holiday table.</p>
+        <ul class="chapter-list">
+          <li>Childhood</li>
+          <li>Family</li>
+          <li>Love</li>
+          <li>Work</li>
+          <li>Hard times</li>
+          <li>Lessons</li>
+          <li>Wishes</li>
+        </ul>
+      </section>
+      <section class="home-card" aria-labelledby="paid-title">
+        <h2 id="paid-title">The full booklet is $7</h2>
+        <p>One hundred original questions, and a layout for printing their answers as a keepsake book. After you pay, you'll be sent back to a thank-you page that unlocks the rest on this device.</p>
+        <!-- TODO: pay href comes from STRIPE_PAYMENT_LINK in js/config.js (one-line swap). -->
+        <p><a class="btn btn-primary" data-pay-link href="#STRIPE_LINK_PLACEHOLDER">Unlock the full booklet — $7</a></p>
+        <p class="placeholder-note" data-pay-placeholder-note id="pay-placeholder-note" hidden>The payment link isn't connected yet. This button is a placeholder.</p>
+      </section>
+    </div>
+
+    <section class="privacy-block" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Nothing leaves the device</h2>
+      <p>There is no account and no sign-in. Answers are saved in this browser only (in local storage). They are not uploaded, not emailed, and not used for advertising. If you want a copy that outlives this phone or computer, print the answers or save them as a PDF.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Answers stay on this device. Nothing is sent to a server. If you clear this browser's stored data, the answers go with it — print a copy or save a PDF if you want a backup.</p>
+      <p><a href="https://www.afternic.com/domain/sharethislife.com">This domain is for sale</a></p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
