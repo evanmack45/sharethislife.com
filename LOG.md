@@ -55,3 +55,9 @@ No `CLOUDFLARE_API_TOKEN`. Hosting is GitHub Pages from the public repo `evanmac
 - 2026-11-14 10:45 PM CT: swapped placeholder for live Stripe Payment Link https://buy.stripe.com/6oU4gr7ac79nb0LaXJ3oA03 (from Dash, $7, redirects to /thanks-k7x2/).
 - 2026-11-14 10:44 PM CT: added sharethislife.com as a pending verified domain in GitHub account Pages settings (not yet verified). Sent Dash TXT _github-pages-challenge-evanmack45 = a9b019233bb1a60e4e28e2480fa3af plus A/AAAA/CNAME records. Next: on Dash's ping, click Verify, enforce HTTPS, run done checklist.
 - 2026-11-14 10:52 PM CT: DNS live per Google DoH (A x4, www CNAME, TXT). Added noindex,nofollow to /thanks-k7x2/ and dropped its og:url. No sitemap exists.
+- 2026-11-15 12:15 AM CT: clicked Verify in account settings; GitHub shows sharethislife.com Verified. Waiting on cert.
+- 2026-11-15 1:15 AM CT: no cert after ~1h verified; re-PUT cname to nudge provisioning.
+- 2026-11-15 3:12 AM CT: cert still missing after 3h verified; removed and re-added cname via API to retrigger.
+- 2026-11-15 3:45 AM CT: cert approved; set https_enforced true. Next: checklist.
+- 2026-11-15 4:05 AM CT: https enforced, desktop shot ok, interview persists, pay opens live $7 stripe. Phone shot (shots/live-phone.png) captured at 400px viewport and looks right-clipped; cannot tell site bug vs capture. Need true 390 shot.
+- 2026-11-15 4:15 AM CT: DONE checklist passed. true 390 shots: shots/live-phone-390.png, live-phone-390-b.png; desktop shots/live-desktop.png. Routine deleted.
