@@ -74,3 +74,6 @@ Removed the $7 booklet offer and the in-browser 100-question interview tool (`bo
 Did not commit to `main`, did not point Pages at this branch, and did not change Stripe. The $19 payment link is live and active, but its after-payment redirect is still `https://evanmack45.github.io/sharethislife-preview/thanks-r8m3/`. On launch it should become `https://sharethislife.com/thanks-r8m3/`.
 
 Local proof screenshots (offer and payment page, 1280 and 390) are on the box at `/workspace/stl19-offer-1280.jpg`, `/workspace/stl19-offer-390.jpg`, `/workspace/stl19-pay-1280.jpg`, and `/workspace/stl19-pay-390.jpg`. `shots/` stays gitignored.
+
+### Launch (2026-11-18, America/Chicago)
+Evan cleared launch of the $19 story-chapter offer (standing permission for bots to put domain sites live, plus the Nov 15 lead-bet decision). Rebased `chapter-19` onto `origin/main` (CNAME `sharethislife.com` kept). Added a tiny noindex `/thanks-k7x2/` stub that meta-refreshes to `/`, so the old $7 Stripe redirect does not 404. Fast-forwarded `main` to this commit and pushed. Did not change Pages settings. Stripe was not edited: the $19 payment link is https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05; its after-payment redirect still points at the preview thanks URL until someone updates it in Stripe.
