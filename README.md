@@ -18,8 +18,8 @@ The on-page consent checkbox has to be checked before the button works.
 
 After payment, Stripe should redirect to `https://sharethislife.com/thanks-r8m3/`. (The payment link is still pointed at the preview thanks URL until someone updates it in Stripe. This repo does not change Stripe.)
 
-## Staging
+## Hosting
 
-The `$19` offer lives on the `chapter-19` branch. GitHub Pages builds from `main`, which still has the older $7 booklet site. Do not merge or point Pages at this branch until Evan approves the launch.
+GitHub Pages from `main`, custom domain `sharethislife.com`, HTTPS enforced. A noindex `/thanks-k7x2/` stub meta-refreshes to `/` so the old $7 payment-link redirect does not 404.
 
 This domain is listed for sale: [Afternic listing](https://www.afternic.com/domain/sharethislife.com).
