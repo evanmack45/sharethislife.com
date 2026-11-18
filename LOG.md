@@ -61,3 +61,16 @@ No `CLOUDFLARE_API_TOKEN`. Hosting is GitHub Pages from the public repo `evanmac
 - 2026-11-15 3:45 AM CT: cert approved; set https_enforced true. Next: checklist.
 - 2026-11-15 4:05 AM CT: https enforced, desktop shot ok, interview persists, pay opens live $7 stripe. Phone shot (shots/live-phone.png) captured at 400px viewport and looks right-clipped; cannot tell site bug vs capture. Need true 390 shot.
 - 2026-11-15 4:15 AM CT: DONE checklist passed. true 390 shots: shots/live-phone-390.png, live-phone-390-b.png; desktop shots/live-desktop.png. Routine deleted.
+
+## 2026-11-18
+
+### Staged the $19 chapter offer on branch `chapter-19` (not launched)
+Ported the parked preview from `evanmack45/sharethislife-preview` into this repo as the main offer: a $19 voice-memo-to-story-chapter service, consent checkbox, privacy page, and `/thanks-r8m3/` (still noindex and unlinked). Kept the CNAME (`sharethislife.com`) and the Afternic “this domain is for sale” footer link.
+
+Public pages are indexable again (`robots.txt` allows `/` and disallows only `/thanks-r8m3/`; noindex dropped from home, privacy, questions, and cards). Added the plan must-haves on the offer and privacy pages: delete-after-delivery (30 days), no training or reuse, buyers must be 18 or older, “drafted with AI and checked line by line,” and a “What to record” intake note.
+
+Removed the $7 booklet offer and the in-browser 100-question interview tool (`book.html`, `interview.html`, `/thanks-k7x2/`, `js/questions.js`, `js/storage.js`) so the page sells one thing. Kept twenty free questions and printable table cards as a clearly secondary path.
+
+Did not commit to `main`, did not point Pages at this branch, and did not change Stripe. The $19 payment link is live and active, but its after-payment redirect is still `https://evanmack45.github.io/sharethislife-preview/thanks-r8m3/`. On launch it should become `https://sharethislife.com/thanks-r8m3/`.
+
+Local proof screenshots (offer and payment page, 1280 and 390) are on the box at `/workspace/stl19-offer-1280.jpg`, `/workspace/stl19-offer-390.jpg`, `/workspace/stl19-pay-1280.jpg`, and `/workspace/stl19-pay-390.jpg`. `shots/` stays gitignored.

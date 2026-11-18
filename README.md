@@ -1,14 +1,25 @@
 # Share This Life
 
-A free, browser-only family life-story interview tool for [sharethislife.com](https://sharethislife.com/).
+A $19 done-for-you story chapter made from a 10–20 minute family recording. Record (or already have) a conversation with a parent or grandparent, email it in, and within 48 hours get back a finished chapter in that person’s own words (PDF plus editable text), with one free revision.
 
-Sit down with someone you love, ask a few good questions, and type (or dictate) what they say. Answers are saved in this browser only. Nothing is sent to a server.
+The public site is static HTML, CSS, and JS. The thanks page (`/thanks-r8m3/`, unlinked, noindex) tells the buyer how to email the audio — or a Google Drive, Dropbox, or iCloud share link — to sharethislife@agentmail.to.
 
-- Free: 20 questions, printable holiday table cards, and a printable booklet of those answers.
-- $7: the full 100-question keepsake and a print-your-answers book layout.
+Twenty free questions and printable table cards are still on the site, as a secondary path. They don’t take the place of the chapter offer, and nothing typed there is sent to us.
 
-This is a plain static site (HTML, CSS, and JavaScript). There is no build step.
+## Stripe
 
-The payment button is a placeholder until a Stripe Payment Link is set. To connect it, change `STRIPE_PAYMENT_LINK` in `js/config.js` (one line) and point Stripe's post-payment redirect at `/thanks-k7x2/`.
+The pay button is wired from one constant in `js/config.js`:
+
+```
+var STRIPE_PAYMENT_LINK = "https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05";
+```
+
+The on-page consent checkbox has to be checked before the button works.
+
+After payment, Stripe should redirect to `https://sharethislife.com/thanks-r8m3/`. (The payment link is still pointed at the preview thanks URL until someone updates it in Stripe. This repo does not change Stripe.)
+
+## Staging
+
+The `$19` offer lives on the `chapter-19` branch. GitHub Pages builds from `main`, which still has the older $7 booklet site. Do not merge or point Pages at this branch until Evan approves the launch.
 
 This domain is listed for sale: [Afternic listing](https://www.afternic.com/domain/sharethislife.com).
