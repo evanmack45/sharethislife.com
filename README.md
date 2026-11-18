@@ -6,6 +6,8 @@ The public site is static HTML, CSS, and JS. The thanks page (`/thanks-r8m3/`, u
 
 Twenty free questions and printable table cards are still on the site, as a secondary path. They don’t take the place of the chapter offer, and nothing typed there is sent to us.
 
+A sample chapter is at `/sample/`, made from an 18-minute clip of a public-domain 1977 oral history recording of Alda Weringer (Internet Archive item [cbak_000036](https://archive.org/details/cbak_000036), Public Domain Mark 1.0).
+
 ## Stripe
 
 The pay button is wired from one constant in `js/config.js`:

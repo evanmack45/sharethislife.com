@@ -1035,3 +1035,86 @@ label.consent-label input[type="checkbox"] {
     margin: 0.6in;
   }
 }
+
+/* Sample chapter */
+.sample-label {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  padding: 0.9rem 1rem;
+  margin: 0 0 1.75rem;
+}
+
+.sample-chapter h1 {
+  font-size: clamp(1.85rem, 5vw, 2.55rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+
+.sample-byline {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+}
+
+.sample-chapter p {
+  margin: 0 0 1rem;
+}
+
+.sample-endnote {
+  font-style: italic;
+  color: var(--muted);
+  margin: 1.35rem 0 2rem;
+}
+
+.sample-questions {
+  border-top: 1px solid var(--line);
+  padding-top: 1.35rem;
+  margin: 0.5rem 0 0;
+}
+
+.sample-questions h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.sample-questions ol {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.sample-questions li {
+  margin: 0 0 0.45rem;
+}
+
+.sample-chapter .btn-row {
+  margin-top: 1.75rem;
+}
+
+@media print {
+  .sample-label,
+  .sample-questions,
+  .sample-chapter {
+    background: white;
+    border-color: #444;
+  }
+
+  .sample-label {
+    border: 1px solid #444;
+  }
+
+  .sample-chapter a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+
+  .sample-questions {
+    break-inside: avoid;
+  }
+}
