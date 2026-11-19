@@ -1118,3 +1118,36 @@ label.consent-label input[type="checkbox"] {
     break-inside: avoid;
   }
 }
+
+
+
+/* hidden must win over component display rules (e.g. .consent-box { display: block }) */
+[hidden] {
+  display: none !important;
+}
+/* Opening-soon / waitlist state */
+.opening-box {
+  margin: 1rem 0 0.9rem;
+  padding: 0.9rem 0.95rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.opening-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 0.4rem;
+  line-height: 1.25;
+}
+
+.opening-box p {
+  margin: 0 0 0.75rem;
+}
+
+.opening-box p:last-child {
+  margin-bottom: 0;
+}
+
+.opening-box .btn {
+  width: 100%;
+}

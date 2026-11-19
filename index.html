@@ -41,7 +41,7 @@
         <h1>Record them at Thanksgiving. Get a chapter back in 48 hours.</h1>
         <p class="lede">Sit down with a parent or a grandparent for ten or twenty minutes — or use a recording you already have — and send it to us. Within 48 hours, you get back a finished story chapter in that person’s own words: a PDF and an editable text file, with one free revision.</p>
         <p>They don’t need an app, an account, or any homework. One conversation is enough.</p>
-        <p>Last day to order for Christmas is December 18.</p>
+        <p>When orders open, the last day for a Christmas delivery is December 18.</p>
       </section>
 
       <section class="offer-card" id="order" aria-labelledby="offer-title">
@@ -55,20 +55,24 @@
         <p>Every quote in the chapter comes from the recording. We don’t invent words. If we’re unsure of a name or a date, we send those back to you as questions.</p>
         <p class="fine"><a href="sample/">Read a sample chapter</a></p>
 
-        <div class="consent-box">
+        <div class="consent-box" data-orders-open-only hidden>
           <label class="consent-label" for="consent">
             <input type="checkbox" id="consent" name="consent">
             <span>The person speaking knows they’re being recorded and agreed to it being turned into a chapter</span>
           </label>
         </div>
 
-        <!-- Pay href comes from STRIPE_PAYMENT_LINK in js/config.js (one-line swap). -->
-        <p><a class="btn btn-primary" data-pay-link id="pay-link" href="#order" aria-disabled="true" tabindex="-1">Order a story chapter — $19</a></p>
-        <p class="placeholder-note" data-pay-placeholder-note id="pay-placeholder-note" hidden>Payment link coming. This button is a placeholder until a test Stripe link is connected.</p>
+        <!-- When ORDERS_OPEN is true, the pay href is set from STRIPE_PAYMENT_LINK in js/config.js after consent. The Stripe URL is not in this HTML. -->
+        <p data-orders-open-only hidden><a class="btn btn-primary" data-pay-link id="pay-link" href="#order" aria-disabled="true" tabindex="-1">Order a story chapter — $19</a></p>
+        <p class="placeholder-note" data-pay-placeholder-note data-orders-open-only id="pay-placeholder-note" hidden>Payment link coming. This button is a placeholder until a test Stripe link is connected.</p>
+
+        <div class="opening-box" data-orders-closed-only>
+          <h3 class="opening-title">Opening soon</h3>
+          <p>Orders are paused until we can prove we can deliver. The chapter will be $19. Write to us and we’ll tell you when it opens.</p>
+          <p><a class="btn btn-primary" data-waitlist-mailto href="mailto:sharethislife@agentmail.to?subject=Tell%20me%20when%20Share%20This%20Life%20opens">Tell me when it opens</a></p>
+        </div>
+
         <p class="fine">We delete the audio and the transcript 30 days after we send the chapter. We don’t clone anyone’s voice, reuse the recording, use it for training, or share it. Each chapter is drafted with AI and checked line by line. You must be 18 or older to order. Full refund on request. <a href="privacy.html">Privacy, consent, and refunds</a>.</p>
-        <noscript>
-          <p class="placeholder-note">Turn on JavaScript to use the order button, or write to sharethislife@agentmail.to.</p>
-        </noscript>
       </section>
     </div>
 
@@ -76,7 +80,7 @@
     <section class="section-block" id="what-to-record" aria-labelledby="record-title">
       <h2 id="record-title">What to record</h2>
       <p>Ten to twenty minutes is enough. Ask them first, sit somewhere quiet, and use the voice memo app already on the phone. One story, or a stretch of ordinary life, works better than trying to cover everything.</p>
-      <p>You don’t need to get every name and date in the room — if we’re unsure of one, we’ll send it back as a question. After you order, you’ll get a one-page card with phone tips and ten good questions.</p>
+      <p>You don’t need to get every name and date in the room — if we’re unsure of one, we’ll send it back as a question. An order includes a one-page card with phone tips and ten good questions.</p>
     </section>
 
     <section class="section-block" id="how" aria-labelledby="how-title">
@@ -84,11 +88,11 @@
       <ol class="steps">
         <li>
           <h3>Record a conversation</h3>
-          <p>Ten to twenty minutes with a parent or grandparent, or a recording you already have. Ask them first. After you order, you’ll get a one-page card with phone tips and ten good questions.</p>
+          <p>Ten to twenty minutes with a parent or grandparent, or a recording you already have. Ask them first. An order includes a one-page card with phone tips and ten good questions.</p>
         </li>
         <li>
-          <h3>Pay $19 and send the audio</h3>
-          <p>You’ll be sent to a thank-you page with the address. Email the file to sharethislife@agentmail.to from the email you used at checkout, and include the speaker’s first name and relationship. If the file is large, send a Google Drive, Dropbox, or iCloud share link instead.</p>
+          <h3>Send the audio</h3>
+          <p>When orders open, you pay the $19 price and email the file to sharethislife@agentmail.to from the email you used at checkout, and include the speaker’s first name and relationship. If the file is large, send a Google Drive, Dropbox, or iCloud share link instead.</p>
         </li>
         <li>
           <h3>We write the chapter from their words</h3>

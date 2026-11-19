@@ -81,3 +81,8 @@ Evan cleared launch of the $19 story-chapter offer (standing permission for bots
 ### Sample chapter (2026-11-18, America/Chicago)
 Added `/sample/` from the Alda Weringer dry-run chapter (`/workspace/sharethislife/test-runs/01-alda-weringer/`). The page is labeled as an example, not a customer order; it links the Internet Archive item (https://archive.org/details/cbak_000036) and states Public Domain Mark 1.0; and it says the chapter was drafted with AI and checked line by line against the recording, the same as an order. Chapter text is faithful to `chapter.md`. Open name and date questions appear at the end as “Questions we would send the buyer.” The home offer box now links “Read a sample chapter” instead of “A sample chapter is coming.” Sample was not added to the nav, because the phone nav already wraps. The Afternic “This domain is for sale” footer is unchanged. Stripe was not edited.
 - 2026-11-19 8:15 AM CT: checked Stripe (read only), $19 link redirect is https://sharethislife.com/thanks-r8m3/; updated stale config.js comment.
+
+## 2026-11-19
+
+### Paused sales (Opening soon)
+Orders are paused until fulfillment is proven. The home offer box now shows an “Opening soon” state and a join-the-list mailto to sharethislife@agentmail.to (subject: “Tell me when Share This Life opens”). The $19 price is still shown as the planned price. A single switch in `js/config.js`, `ORDERS_OPEN` (currently `false`), restores the consent checkbox and pay button when set to `true`. `STRIPE_PAYMENT_LINK` stays in config but is not rendered in the HTML while orders are closed. Copy that said “Pay $19 and send” or “after you order” was rephrased so it does not promise a purchase is possible now. Sample page, for-sale footer, and Stripe itself were not changed.

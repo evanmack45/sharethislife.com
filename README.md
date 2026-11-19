@@ -8,17 +8,21 @@ Twenty free questions and printable table cards are still on the site, as a seco
 
 A sample chapter is at `/sample/`, made from an 18-minute clip of a public-domain 1977 oral history recording of Alda Weringer (Internet Archive item [cbak_000036](https://archive.org/details/cbak_000036), Public Domain Mark 1.0).
 
-## Stripe
+## Orders and Stripe
 
-The pay button is wired from one constant in `js/config.js`:
+Sales are paused until fulfillment is proven. `ORDERS_OPEN` in `js/config.js` is the one switch:
+
+```
+var ORDERS_OPEN = false;
+```
+
+While it is `false`, the offer box shows “Opening soon” and a waitlist mailto to sharethislife@agentmail.to. The Stripe URL is kept in config but is not written into the page. Set `ORDERS_OPEN` to `true` to restore the consent checkbox and the $19 pay button. The pay href then comes from:
 
 ```
 var STRIPE_PAYMENT_LINK = "https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05";
 ```
 
-The on-page consent checkbox has to be checked before the button works.
-
-After payment, Stripe should redirect to `https://sharethislife.com/thanks-r8m3/`. (The payment link is still pointed at the preview thanks URL until someone updates it in Stripe. This repo does not change Stripe.)
+The consent checkbox has to be checked before that button works. After payment, Stripe redirects to `https://sharethislife.com/thanks-r8m3/`. This repo does not change Stripe.
 
 ## Hosting
 

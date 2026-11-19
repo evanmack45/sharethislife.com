@@ -1,4 +1,4 @@
-/* Share This Life — preview: consent gate, pay link, mailto. */
+/* Share This Life — orders-open switch, consent gate, pay link, mailto. */
 (function () {
   "use strict";
 
@@ -12,9 +12,23 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   }
 
+  function ordersAreOpen() {
+    return config.ordersOpen === true;
+  }
+
+  function syncOrdersState() {
+    var open = ordersAreOpen();
+    $$("[data-orders-open-only]").forEach(function (el) {
+      el.hidden = !open;
+    });
+    $$("[data-orders-closed-only]").forEach(function (el) {
+      el.hidden = open;
+    });
+  }
+
   function showPlaceholderNotes() {
     $$("[data-pay-placeholder-note]").forEach(function (el) {
-      if (config.stripeIsPlaceholder) {
+      if (ordersAreOpen() && config.stripeIsPlaceholder) {
         el.hidden = false;
       } else {
         el.hidden = true;
@@ -26,6 +40,13 @@
     var consent = $("#consent");
     var pay = $("[data-pay-link]");
     if (!pay) return;
+
+    if (!ordersAreOpen()) {
+      pay.setAttribute("aria-disabled", "true");
+      pay.setAttribute("tabindex", "-1");
+      pay.setAttribute("href", "#order");
+      return;
+    }
 
     var checked = !!(consent && consent.checked);
     if (checked) {
@@ -44,7 +65,7 @@
     var pay = $("[data-pay-link]");
     if (!pay) return;
 
-    if (config.stripeIsPlaceholder) {
+    if (ordersAreOpen() && config.stripeIsPlaceholder) {
       pay.setAttribute("aria-describedby", "pay-placeholder-note");
     }
 
@@ -53,6 +74,10 @@
     }
 
     pay.addEventListener("click", function (e) {
+      if (!ordersAreOpen()) {
+        e.preventDefault();
+        return;
+      }
       var checked = !!(consent && consent.checked);
       if (!checked) {
         e.preventDefault();
@@ -78,8 +103,14 @@
         el.setAttribute("href", config.mailtoHref);
       }
     });
+    $$("[data-waitlist-mailto]").forEach(function (el) {
+      if (config.waitlistMailtoHref) {
+        el.setAttribute("href", config.waitlistMailtoHref);
+      }
+    });
   }
 
+  syncOrdersState();
   showPlaceholderNotes();
   bindPay();
   bindMailto();
