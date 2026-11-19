@@ -2,8 +2,8 @@
  *
  * STRIPE_PAYMENT_LINK is the live $19 Stripe Payment Link.
  * After payment, the thanks page on this site is /thanks-r8m3/.
- * The Stripe link's redirect may still point at the preview host
- * until it is updated in Stripe (do not change Stripe from this repo).
+ * Stripe redirects to https://sharethislife.com/thanks-r8m3/ (checked
+ * 2026-11-19). Do not change Stripe from this repo.
  * Swap this one line if the link changes.
  */
 (function (root) {
