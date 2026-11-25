@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /thanks-k7x2/
-Disallow: /thanks-r8m3/
 
-# Custom domain is the canonical home once DNS is pointed at GitHub Pages.
+Disallow: /thanks-r8m3/
