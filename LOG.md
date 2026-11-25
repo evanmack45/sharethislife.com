@@ -95,3 +95,12 @@ Foil's 2026-11-24 review flagged that `js/config.js` still published the live $1
 Removed that URL from `js/config.js` and from the README example. `STRIPE_PAYMENT_LINK` is now an empty string, with the comment: set by Dash at GO; do not commit a live link before round 5 passes. `ORDERS_OPEN` stays `false`. No copy, footer, or sample changes. Stripe itself was not edited.
 
 Local check (Python HTTP server, Playwright): home still shows “Opening soon” and the waitlist button; the pay button stays hidden (`data-orders-open-only`); `STL_CONFIG.stripePaymentLink` is `""`; `ordersOpen` is false; no page or console errors with the empty link.
+
+
+## 2026-11-25
+
+### Not sellable: fulfillment testing stopped
+
+Dash chose B at 2:48 AM CT: stop Share This Life fulfillment testing now. Round 6 graded 0 of 3 gift-worthy as first received (`/workspace/sharethislife/test-runs-6/summary.md`). Rounds 2 through 6 never met the 3-of-3 bar. The transcription, memory and loop fixes held; the remaining failures were drafting judgment, plus a structure check that fails open on a badly written flag row. The write-up is `/workspace/sharethislife/POSTMORTEM.md`.
+
+The site is **not sellable**. `ORDERS_OPEN` in `js/config.js` stays `false`. The “Opening soon” waitlist stays up. `STRIPE_PAYMENT_LINK` stays empty. This log entry is a local commit only; nothing was pushed, and nothing public on the site was changed.
