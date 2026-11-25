@@ -6,19 +6,18 @@
  * true: restore the consent checkbox and the $19 pay button exactly
  *   as they work when orders are open.
  *
- * STRIPE_PAYMENT_LINK is the live $19 Stripe Payment Link.
- * After payment, the thanks page on this site is /thanks-r8m3/.
- * Stripe redirects to https://sharethislife.com/thanks-r8m3/ (checked
- * 2026-11-19). Do not change Stripe from this repo.
- * Swap that one line if the link changes.
+ * STRIPE_PAYMENT_LINK is left empty until Dash sets it at GO.
+ * Do not commit a live link before round 5 passes. After payment,
+ * the thanks page on this site is /thanks-r8m3/. Do not change
+ * Stripe from this repo.
  */
 (function (root) {
   "use strict";
 
   var ORDERS_OPEN = false;
 
-  // Live Stripe Payment Link ($19). Thanks page on this site: /thanks-r8m3/
-  var STRIPE_PAYMENT_LINK = "https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05";
+  // set by Dash at GO; do not commit a live link before round 5 passes
+  var STRIPE_PAYMENT_LINK = "";
 
   var SUBMIT_EMAIL = "sharethislife@agentmail.to";
   var MAILTO_SUBJECT = "Share This Life chapter recording";

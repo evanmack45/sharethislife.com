@@ -16,11 +16,7 @@ Sales are paused until fulfillment is proven. `ORDERS_OPEN` in `js/config.js` is
 var ORDERS_OPEN = false;
 ```
 
-While it is `false`, the offer box shows “Opening soon” and a waitlist mailto to sharethislife@agentmail.to. The Stripe URL is kept in config but is not written into the page. Set `ORDERS_OPEN` to `true` to restore the consent checkbox and the $19 pay button. The pay href then comes from:
-
-```
-var STRIPE_PAYMENT_LINK = "https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05";
-```
+While it is `false`, the offer box shows “Opening soon” and a waitlist mailto to sharethislife@agentmail.to. `STRIPE_PAYMENT_LINK` is left empty until Dash sets it at GO. Do not commit a live link before round 5 passes. Set `ORDERS_OPEN` to `true` only after round 5 passes and Dash has put the link in config; that restores the consent checkbox and the $19 pay button.
 
 The consent checkbox has to be checked before that button works. After payment, Stripe redirects to `https://sharethislife.com/thanks-r8m3/`. This repo does not change Stripe.
 

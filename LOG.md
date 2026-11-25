@@ -86,3 +86,12 @@ Added `/sample/` from the Alda Weringer dry-run chapter (`/workspace/sharethisli
 
 ### Paused sales (Opening soon)
 Orders are paused until fulfillment is proven. The home offer box now shows an “Opening soon” state and a join-the-list mailto to sharethislife@agentmail.to (subject: “Tell me when Share This Life opens”). The $19 price is still shown as the planned price. A single switch in `js/config.js`, `ORDERS_OPEN` (currently `false`), restores the consent checkbox and pay button when set to `true`. `STRIPE_PAYMENT_LINK` stays in config but is not rendered in the HTML while orders are closed. Copy that said “Pay $19 and send” or “after you order” was rephrased so it does not promise a purchase is possible now. Sample page, for-sale footer, and Stripe itself were not changed.
+
+## 2026-11-24
+
+### Removed the live $19 Stripe URL from config (orders stay closed)
+Foil's 2026-11-24 review flagged that `js/config.js` still published the live $19 Stripe Payment Link (`buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05`) while `ORDERS_OPEN` is `false`. The hosted Stripe page showed as inactive, but anyone who reactivated the link in Stripe could take payment from a public source before round 5 passes.
+
+Removed that URL from `js/config.js` and from the README example. `STRIPE_PAYMENT_LINK` is now an empty string, with the comment: set by Dash at GO; do not commit a live link before round 5 passes. `ORDERS_OPEN` stays `false`. No copy, footer, or sample changes. Stripe itself was not edited.
+
+Local check (Python HTTP server, Playwright): home still shows “Opening soon” and the waitlist button; the pay button stays hidden (`data-orders-open-only`); `STL_CONFIG.stripePaymentLink` is `""`; `ordersOpen` is false; no page or console errors with the empty link.
