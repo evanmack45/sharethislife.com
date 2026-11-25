@@ -73,7 +73,7 @@ Removed the $7 booklet offer and the in-browser 100-question interview tool (`bo
 
 Did not commit to `main`, did not point Pages at this branch, and did not change Stripe. The $19 payment link is live and active, but its after-payment redirect is still `https://evanmack45.github.io/sharethislife-preview/thanks-r8m3/`. On launch it should become `https://sharethislife.com/thanks-r8m3/`.
 
-Local proof screenshots (offer and payment page, 1280 and 390) are on the box at `/workspace/stl19-offer-1280.jpg`, `/workspace/stl19-offer-390.jpg`, `/workspace/stl19-pay-1280.jpg`, and `/workspace/stl19-pay-390.jpg`. `shots/` stays gitignored.
+Local proof screenshots (offer and payment page, 1280 and 390) are on the box at `/workspace/sites/sharethislife.com/shots/stl19-offer-1280.jpg`, `/workspace/sites/sharethislife.com/shots/stl19-offer-390.jpg`, `/workspace/sites/sharethislife.com/shots/stl19-pay-1280.jpg`, and `/workspace/sites/sharethislife.com/shots/stl19-pay-390.jpg`. `shots/` stays gitignored.
 
 ### Launch (2026-11-18, America/Chicago)
 Evan cleared launch of the $19 story-chapter offer (standing permission for bots to put domain sites live, plus the Nov 15 lead-bet decision). Rebased `chapter-19` onto `origin/main` (CNAME `sharethislife.com` kept). Added a tiny noindex `/thanks-k7x2/` stub that meta-refreshes to `/`, so the old $7 Stripe redirect does not 404. Fast-forwarded `main` to this commit and pushed. Did not change Pages settings. Stripe was not edited: the $19 payment link is https://buy.stripe.com/3cIfZ90LO2T77Oz1n93oA05; its after-payment redirect still points at the preview thanks URL until someone updates it in Stripe.
@@ -86,3 +86,14 @@ Added `/sample/` from the Alda Weringer dry-run chapter (`/workspace/sharethisli
 
 ### Paused sales (Opening soon)
 Orders are paused until fulfillment is proven. The home offer box now shows an “Opening soon” state and a join-the-list mailto to sharethislife@agentmail.to (subject: “Tell me when Share This Life opens”). The $19 price is still shown as the planned price. A single switch in `js/config.js`, `ORDERS_OPEN` (currently `false`), restores the consent checkbox and pay button when set to `true`. `STRIPE_PAYMENT_LINK` stays in config but is not rendered in the HTML while orders are closed. Copy that said “Pay $19 and send” or “after you order” was rephrased so it does not promise a purchase is possible now. Sample page, for-sale footer, and Stripe itself were not changed.
+
+## 2026-11-24
+
+### First site, from the scorecard ("Ask them before the holidays.")
+Put the public site back on the first product: a free browser-only interview. No account. Answers stay in this browser (`localStorage` key `sharethislife.v1`). Seven chapters (childhood, family, love, work, hard times, lessons, wishes). 100 original questions. Free tier is 20 questions, printable, including the holiday table cards. $7 unlocks the rest and the print-your-answers book. Dictation uses the Web Speech API where the browser has it. Stack is static HTML/CSS/JS. No Stripe product or payment link was created here.
+
+The pay button is a clearly marked placeholder. `STRIPE_PAYMENT_LINK` in `js/config.js` is `#STRIPE_LINK_PLACEHOLDER`. Clicking it does not leave the page. The note under the button says the link is not connected. Asked Dash for a $7 Stripe Payment Link whose after-payment redirect is `https://sharethislife.com/thanks-k7x2/`. That page unlocks the booklet on the device that opens it (honor system, same as the first build). SendToAgent is not available in this session, so the ask is recorded here.
+
+DNS and registrar settings were not changed. `CNAME` is still `sharethislife.com`. No Cloudflare token on this box, so hosting stays GitHub Pages on `evanmack45/sharethislife.com`.
+
+`/thanks-r8m3/` stays on the site, unlinked and disallowed in `robots.txt`, so an earlier payment redirect does not 404. `/questions.html`, `/privacy.html`, and `/sample/` came off this publish because they belonged to the later chapter offer. That offer remains in git history at `30bfe58`.

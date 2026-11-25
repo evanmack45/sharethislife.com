@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Share This Life — A story chapter in their own words.</title>
-  <meta name="description" content="Record a 10–20 minute conversation with a parent or grandparent. Within 48 hours, get back a finished story chapter in their own words. $19.">
+  <title>Share This Life — Ask them before the holidays.</title>
+  <meta name="description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
   <link rel="canonical" href="https://sharethislife.com/">
-  <meta property="og:url" content="https://sharethislife.com/">
-  <meta property="og:image" content="https://sharethislife.com/img/og.png">
-  <meta name="twitter:image" content="https://sharethislife.com/img/og.png">
-  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#F3EBE0">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Share This Life">
-  <meta property="og:title" content="Share This Life — A story chapter in their own words.">
-  <meta property="og:description" content="Record a 10–20 minute conversation with a parent or grandparent. Within 48 hours, get back a finished story chapter in their own words. $19.">
-  <meta name="twitter:title" content="Share This Life — A story chapter in their own words.">
-  <meta name="twitter:description" content="Record a 10–20 minute conversation with a parent or grandparent. Within 48 hours, get back a finished story chapter in their own words. $19.">
+  <meta property="og:title" content="Share This Life — Ask them before the holidays.">
+  <meta property="og:description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
+  <meta property="og:url" content="https://sharethislife.com/">
+  <meta property="og:image" content="https://sharethislife.com/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Share This Life — Ask them before the holidays.">
+  <meta name="twitter:description" content="Ask a parent, a grandparent, or anyone whose stories you want to keep. A free interview tool in your browser. Answers stay on this device.">
+  <meta name="twitter:image" content="https://sharethislife.com/img/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -27,101 +27,62 @@
   <header class="site-header">
     <a class="wordmark" href="index.html">Share This Life</a>
     <nav class="site-nav" aria-label="Site">
-      <a href="index.html#order" aria-current="page">Order a chapter</a>
-      <a href="questions.html">Twenty questions</a>
+      <a href="interview.html">Interview</a>
       <a href="cards.html">Table cards</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="book.html">Print a book</a>
     </nav>
   </header>
 
   <main id="main">
-    <div class="hero-offer">
-      <section class="hero">
-        <hr class="ornament">
-        <h1>Record them at Thanksgiving. Get a chapter back in 48 hours.</h1>
-        <p class="lede">Sit down with a parent or a grandparent for ten or twenty minutes — or use a recording you already have — and send it to us. Within 48 hours, you get back a finished story chapter in that person’s own words: a PDF and an editable text file, with one free revision.</p>
-        <p>They don’t need an app, an account, or any homework. One conversation is enough.</p>
-        <p>When orders open, the last day for a Christmas delivery is December 18.</p>
-      </section>
+    <section class="hero">
+      <hr class="ornament">
+      <h1>Ask them before the holidays.</h1>
+      <p class="lede">Sit down with a parent, a grandparent, or anyone whose stories you want to keep, and ask a few good questions before the season gets away from you.</p>
+      <p>Type what they say. If your browser allows it, you can also speak the answers out loud. Nothing is sent anywhere. It stays on this device.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="interview.html">Start an interview</a>
+        <a class="btn btn-quiet" href="cards.html">Print table cards</a>
+      </div>
+    </section>
 
-      <section class="offer-card" id="order" aria-labelledby="offer-title">
-        <h2 id="offer-title">A story chapter, $19</h2>
-        <ul class="offer-list">
-          <li>A finished chapter, written in their first person, from the recording you send</li>
-          <li>A PDF and an editable text file</li>
-          <li>One free revision</li>
-          <li>Back to you within 48 hours</li>
+    <div class="home-sections">
+      <section class="home-card" aria-labelledby="free-title">
+        <h2 id="free-title">Twenty questions, free</h2>
+        <p>The first twenty questions are a complete short interview: childhood, family, love, work, hard times, lessons, and wishes. You can print the answers, and you can print a set of cards to pass around the holiday table.</p>
+        <ul class="chapter-list">
+          <li>Childhood</li>
+          <li>Family</li>
+          <li>Love</li>
+          <li>Work</li>
+          <li>Hard times</li>
+          <li>Lessons</li>
+          <li>Wishes</li>
         </ul>
-        <p>Every quote in the chapter comes from the recording. We don’t invent words. If we’re unsure of a name or a date, we send those back to you as questions.</p>
-        <p class="fine"><a href="sample/">Read a sample chapter</a></p>
-
-        <div class="consent-box" data-orders-open-only hidden>
-          <label class="consent-label" for="consent">
-            <input type="checkbox" id="consent" name="consent">
-            <span>The person speaking knows they’re being recorded and agreed to it being turned into a chapter</span>
-          </label>
-        </div>
-
-        <!-- When ORDERS_OPEN is true, the pay href is set from STRIPE_PAYMENT_LINK in js/config.js after consent. The Stripe URL is not in this HTML. -->
-        <p data-orders-open-only hidden><a class="btn btn-primary" data-pay-link id="pay-link" href="#order" aria-disabled="true" tabindex="-1">Order a story chapter — $19</a></p>
-        <p class="placeholder-note" data-pay-placeholder-note data-orders-open-only id="pay-placeholder-note" hidden>Payment link coming. This button is a placeholder until a test Stripe link is connected.</p>
-
-        <div class="opening-box" data-orders-closed-only>
-          <h3 class="opening-title">Opening soon</h3>
-          <p>Orders are paused until we can prove we can deliver. The chapter will be $19. Write to us and we’ll tell you when it opens.</p>
-          <p><a class="btn btn-primary" data-waitlist-mailto href="mailto:sharethislife@agentmail.to?subject=Tell%20me%20when%20Share%20This%20Life%20opens">Tell me when it opens</a></p>
-        </div>
-
-        <p class="fine">We delete the audio and the transcript 30 days after we send the chapter. We don’t clone anyone’s voice, reuse the recording, use it for training, or share it. Each chapter is drafted with AI and checked line by line. You must be 18 or older to order. Full refund on request. <a href="privacy.html">Privacy, consent, and refunds</a>.</p>
+      </section>
+      <section class="home-card" aria-labelledby="paid-title">
+        <h2 id="paid-title">The full booklet is $7</h2>
+        <p>One hundred original questions, and a layout for printing their answers as a keepsake book. After you pay, you'll be sent back to a thank-you page that unlocks the rest on this device.</p>
+        <!-- TODO: pay href comes from STRIPE_PAYMENT_LINK in js/config.js (one-line swap). -->
+        <p><a class="btn btn-primary" data-pay-link href="#STRIPE_LINK_PLACEHOLDER">Unlock the full booklet — $7</a></p>
+        <p class="placeholder-note" data-pay-placeholder-note id="pay-placeholder-note" hidden>The payment link isn't connected yet. This button is a placeholder.</p>
       </section>
     </div>
 
-
-    <section class="section-block" id="what-to-record" aria-labelledby="record-title">
-      <h2 id="record-title">What to record</h2>
-      <p>Ten to twenty minutes is enough. Ask them first, sit somewhere quiet, and use the voice memo app already on the phone. One story, or a stretch of ordinary life, works better than trying to cover everything.</p>
-      <p>You don’t need to get every name and date in the room — if we’re unsure of one, we’ll send it back as a question. An order includes a one-page card with phone tips and ten good questions.</p>
-    </section>
-
-    <section class="section-block" id="how" aria-labelledby="how-title">
-      <h2 id="how-title">How it works</h2>
-      <ol class="steps">
-        <li>
-          <h3>Record a conversation</h3>
-          <p>Ten to twenty minutes with a parent or grandparent, or a recording you already have. Ask them first. An order includes a one-page card with phone tips and ten good questions.</p>
-        </li>
-        <li>
-          <h3>Send the audio</h3>
-          <p>When orders open, you pay the $19 price and email the file to sharethislife@agentmail.to from the email you used at checkout, and include the speaker’s first name and relationship. If the file is large, send a Google Drive, Dropbox, or iCloud share link instead.</p>
-        </li>
-        <li>
-          <h3>We write the chapter from their words</h3>
-          <p>The chapter is drafted with AI and checked line by line. We don’t invent quotes. Names and dates we can’t confirm come back to you as questions.</p>
-        </li>
-        <li>
-          <h3>You get it back within 48 hours</h3>
-          <p>A PDF and an editable text file, in the same email thread, with one free revision if you want a change.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section-block" aria-labelledby="free-title">
-      <h2 id="free-title">Or start with twenty free questions</h2>
-      <p>If you’d rather ask them yourself first, here are twenty questions and a set of printable table cards. They live on this site. Nothing you type is sent to us.</p>
-      <p class="btn-row">
-        <a class="btn btn-quiet" href="questions.html">Read the twenty questions</a>
-        <a class="btn btn-quiet" href="cards.html">Print table cards</a>
-      </p>
+    <section class="privacy-block" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Nothing leaves the device</h2>
+      <p>There is no account and no sign-in. Answers are saved in this browser only (in local storage). They are not uploaded, not emailed, and not used for advertising. If you want a copy that outlives this phone or computer, print the answers or save them as a PDF.</p>
     </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>We delete the audio and the transcript 30 days after we send the chapter. We don’t clone anyone’s voice, reuse a recording, use it for training, or share it. Each chapter is drafted with AI and checked line by line. You must be 18 or older to order. Full refund on request. <a href="privacy.html">Privacy, consent, and refunds</a>.</p>
+      <p>Answers stay on this device. Nothing is sent to a server. If you clear this browser's stored data, the answers go with it — print a copy or save a PDF if you want a backup.</p>
       <p><a href="https://www.afternic.com/domain/sharethislife.com">This domain is for sale</a></p>
     </div>
   </footer>
 
   <script src="js/config.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/storage.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
