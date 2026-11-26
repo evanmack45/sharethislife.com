@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Disallow: /thanks-r8m3/
+
+Sitemap: https://sharethislife.com/sitemap.xml
