@@ -104,3 +104,8 @@ Local check (Python HTTP server, Playwright): home still shows “Opening soon�
 Dash chose B at 2:48 AM CT: stop Share This Life fulfillment testing now. Round 6 graded 0 of 3 gift-worthy as first received (`/workspace/sharethislife/test-runs-6/summary.md`). Rounds 2 through 6 never met the 3-of-3 bar. The transcription, memory and loop fixes held; the remaining failures were drafting judgment, plus a structure check that fails open on a badly written flag row. The write-up is `/workspace/sharethislife/POSTMORTEM.md`.
 
 The site is **not sellable**. `ORDERS_OPEN` in `js/config.js` stays `false`. The “Opening soon” waitlist stays up. `STRIPE_PAYMENT_LINK` stays empty. This log entry is a local commit only; nothing was pushed, and nothing public on the site was changed.
+
+## 2026-11-26 (CT) Compass rows (Mason)
+- STL-1: PASS. Removed Thanksgiving, the Christmas December 18 delivery date, and visible $19 from the homepage. Copy now includes "Opening soon, join the list." Waitlist mailto still works. `ORDERS_OPEN` stays false; no pay button is on; `STRIPE_PAYMENT_LINK` stays empty. Hidden restore-when-open button still says $19. Gate PASS, no P0 (pre-existing P1: 3 tap targets under 24px). Lighthouse 100, CLS 0. Home is still 557 words, fold 114/233 (over the 450 / 100 bar; not further recut). Commit `bc4a356`.
+- STL-2: PASS. Added sitemap.xml for the homepage and a Sitemap line in robots.txt. Live HEAD of /sitemap.xml is 200. Same commit `bc4a356`.
+- STL-3: SKIP (Dash with Evan, Search Console Domain property).
