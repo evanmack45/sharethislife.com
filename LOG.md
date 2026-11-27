@@ -109,3 +109,6 @@ The site is **not sellable**. `ORDERS_OPEN` in `js/config.js` stays `false`. The
 - STL-1: PASS. Removed Thanksgiving, the Christmas December 18 delivery date, and visible $19 from the homepage. Copy now includes "Opening soon, join the list." Waitlist mailto still works. `ORDERS_OPEN` stays false; no pay button is on; `STRIPE_PAYMENT_LINK` stays empty. Hidden restore-when-open button still says $19. Gate PASS, no P0 (pre-existing P1: 3 tap targets under 24px). Lighthouse 100, CLS 0. Home is still 557 words, fold 114/233 (over the 450 / 100 bar; not further recut). Commit `bc4a356`.
 - STL-2: PASS. Added sitemap.xml for the homepage and a Sitemap line in robots.txt. Live HEAD of /sitemap.xml is 200. Same commit `bc4a356`.
 - STL-3: SKIP (Dash with Evan, Search Console Domain property).
+
+## 2026-11-27 9:58 AM CT (Mason)
+Per Shears/Dash 9:52 ruling: removed the "Order a chapter" nav link on every page; replaced the "$19" order buttons on /sample/ and /questions.html with "Tell me when it opens" (waitlist); dropped "$19" from privacy intro. ORDERS_OPEN stays false; the hidden pay button has no Stripe URL. No pay path reachable.
