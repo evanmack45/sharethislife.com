@@ -815,6 +815,7 @@ input[type="checkbox"] {
 }
 
 .hero-offer .hero {
+  width: 100%;
   margin: 0;
 }
 
@@ -1164,6 +1165,7 @@ label.consent-label input[type="checkbox"] {
 .site-nav a, .wordmark { min-width: 48px; }
 .btn, .offer-card .btn { min-height: 48px; }
 .hero-chapter { margin: 0 0 1.25rem; }
+.hero-chapter a { display: block; width: 100%; }
 .hero-shot {
   display: block;
   width: 100%;
@@ -1181,8 +1183,18 @@ details a { min-height: 24px; min-width: 0; }
 .how-it-reads .lede { margin-top: 0.5rem; }
 
 @media (max-width: 899px) {
-  .offer-card { display: flex; flex-direction: column; }
+  main { padding-top: 0.75rem; }
+  .hero-offer { margin-top: 0.75rem; }
+  .hero-offer .ornament { margin-bottom: 0.5rem; }
+  .hero-offer .hero h1 { margin-bottom: 0.5rem; }
+  .hero-chapter { margin-bottom: 0.5rem; }
+  .hero-shot {
+    width: 100%;
+    height: auto;
+  }
+  .offer-card { display: flex; flex-direction: column; padding-top: 0.85rem; }
   .offer-card .opening-box { order: 1; }
+  .offer-card h2 { order: 2; }
   .offer-card .offer-list { order: 2; }
   .offer-card > .fine { order: 3; }
 }

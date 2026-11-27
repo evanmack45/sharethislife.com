@@ -140,3 +140,17 @@ Local measure after the move:
 Before shots (live, pre-change): `/workspace/mason/scan-pass-shots/order-1115/before-stl-home-{390,1280}.png`. After (local): `/workspace/mason/scan-pass-shots/order-1115/after-stl-home-{390,1280}.png`.
 
 Follow-up in the same order: raised `.hero-offer` desktop margin-bottom from 8rem to 16rem so the lede stays below a 1440×900 fold (visual-qa-gate desktop). Set `.fine a` to min-height 24px for the "Privacy, consent, and refunds" link (Shears 24px secondary-link rule). `ORDERS_OPEN` still false.
+
+## 2026-11-27 ~11:40 AM CT (Mason)
+
+Shears recheck (11:06–11:16, against 50e741e) plus Dash 11:15 order, folded into the same STL batch.
+
+- Lede and follow-up stay below the 390 fold; the “Opening soon” box and waitlist are first in the offer card at 390 (already in 3810121 / 03d5ec7).
+- Enlarged the sample-chapter picture: recropped a taller frame of the same public-domain sample page (full width, more of the chapter) so the visible box at 390 is 350×330, hero **0.351**. No new copy in or around the image. No side cropping.
+- Deleted, did not rewrite, three below-fold passages that repeated facts already in “How it works” or on /privacy.html: the “Every quote…” paragraph, the long privacy `.fine` on the home page (Privacy remains in the header nav), and the second “What to record” paragraph. Total 427 (cap 450). Words/screen 109 (cap 110).
+- No official Ansel lockup exists for Share This Life; the italic text wordmark is unchanged. Noted here on purpose.
+- `ORDERS_OPEN` remains false. Hidden pay button stays hidden. No Stripe URL in the HTML.
+
+Shears-method local measure at 390: sweep fold prose **29** (h1 7 + “Opening soon” 2 + paused-orders 15 + the waitlist label 5), mason 12+ 15, fold words 37, hero 0.351, total 427, wps 109, taps fail 0, overflow 0, logo=text-wordmark. At 1280: sweep prose 36, fold 73, lede top 1026 (below 800 and 900).
+
+Shots: `/workspace/mason/scan-pass-shots/order-1115/after-hero-stl-home-{390,1280}.png` and `shears-local3/`.
