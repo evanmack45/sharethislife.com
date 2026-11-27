@@ -168,3 +168,5 @@ Shears cut of c0834b9: italic Georgia text was not a lockup. Header lockup only,
 `ORDERS_OPEN` remains false. Hidden pay button stays hidden. No Stripe URL in the HTML.
 
 Local Shears-method measure at 390: sweep prose 29, fold 34, hero **0.350926** (350×330, unchanged), total 421, wps 108, taps 0, overflow 0, logo=img-lockup. At 1280: sweep prose 36, fold 70. Pause box and waitlist stay in the first screen. Wordmark tap 223.5×48.
+
+Live head `eb16e95`. Pages built that commit. Live home, privacy, questions, CSS, and `img/lockup.svg` equal the repo. Live `ORDERS_OPEN = false`, `STRIPE_PAYMENT_LINK = ""`. Live Shears remasure matched local (hero 0.350926, logo=img-lockup, wps 108). visual-qa-gate on the live home: PASS (no P0, no P1). Lighthouse mobile 100/100/100/100, CLS 0, LCP 1.2s. Out: `/workspace/mason/scan-pass-qa/stl-home-eb16e95/`.
