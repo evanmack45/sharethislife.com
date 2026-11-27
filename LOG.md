@@ -123,3 +123,18 @@ Shears nits: "An order includes" -> "Each chapter comes with"; "18 or older to o
 - Taps: wordmark, header nav, main buttons, footer links, and "Read a sample chapter" are min-height 48px. Smallest measured tap on the home page at 390 is 73px, 0 fails.
 - No official Ansel lockup or press-kit mark was available; the text wordmark was left in place (no invented logo).
 - Local visual-qa-gate on the home page: PASS (no P0). Shots: `/workspace/mason/sweep-qa/sweep-stl-home-{390,1280}.png`.
+
+## 2026-11-27 ~11:30 AM CT (Mason)
+
+Dash order, Fri 11/27 11:15 AM CT: fold-prose on the home page at 390 to 40 words or fewer. Cut and move only; no new claims; no prices.
+
+Moved the 53-word lede, the 14-word follow-up ("They don't need an app…"), the "Every quote in the chapter…" paragraph, and the long privacy `.fine` out of the hero and offer card into a new `.how-it-reads` section below `.hero-offer`. At 1280, added 8rem bottom margin on `.hero-offer` so the lede starts at or below the 800px fold. At 390, reordered the offer card with flex so the "Opening soon" box and waitlist button stay in the first screen (they had slipped just below 844 after the lede left).
+
+`ORDERS_OPEN` remains false in `js/config.js`. The hidden pay button (`data-orders-open-only hidden`) stays hidden. No Stripe URL in the HTML. No new copy.
+
+Local measure after the move:
+
+- 390: fold 43, fold-prose 15 (the 15-word "Orders are paused…" line). Taps unchanged (min 73, 0 fails).
+- 1280×800: fold 76, fold-prose 28 (13-word offer item + the 15-word paused line). Lede is below the fold.
+
+Before shots (live, pre-change): `/workspace/mason/scan-pass-shots/order-1115/before-stl-home-{390,1280}.png`. After (local): `/workspace/mason/scan-pass-shots/order-1115/after-stl-home-{390,1280}.png`.

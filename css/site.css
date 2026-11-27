@@ -806,6 +806,7 @@ input[type="checkbox"] {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 1.75rem;
+    margin-bottom: 8rem;
   }
   .hero-offer .hero {
     width: auto;
@@ -1172,3 +1173,16 @@ label.consent-label input[type="checkbox"] {
   background: var(--card);
 }
 details a { min-height: 24px; min-width: 0; }
+
+.how-it-reads {
+  width: min(100% - 2.5rem, 40rem);
+  margin: 0 auto 2rem;
+}
+.how-it-reads .lede { margin-top: 0.5rem; }
+
+@media (max-width: 899px) {
+  .offer-card { display: flex; flex-direction: column; }
+  .offer-card .opening-box { order: 1; }
+  .offer-card .offer-list { order: 2; }
+  .offer-card > .fine { order: 3; }
+}
