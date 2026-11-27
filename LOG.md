@@ -112,3 +112,6 @@ The site is **not sellable**. `ORDERS_OPEN` in `js/config.js` stays `false`. The
 
 ## 2026-11-27 9:58 AM CT (Mason)
 Per Shears/Dash 9:52 ruling: removed the "Order a chapter" nav link on every page; replaced the "$19" order buttons on /sample/ and /questions.html with "Tell me when it opens" (waitlist); dropped "$19" from privacy intro. ORDERS_OPEN stays false; the hidden pay button has no Stripe URL. No pay path reachable.
+
+## 2026-11-27 10:38 AM CT (Mason)
+Shears nits: "An order includes" -> "Each chapter comes with"; "18 or older to order." -> "18 or older." on all pages. Copy only.
