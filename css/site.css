@@ -1,4 +1,4 @@
-/* Share This Life — warm, handmade, clean. System fonts only. */
+/* Share This Life — warm, handmade, clean. Body uses system fonts. The header lockup is typeset in self-hosted Libre Baskerville Regular (SIL OFL 1.1; fonts/OFL-LibreBaskerville.txt). */
 
 :root {
   --paper: #F3EBE0;
@@ -95,17 +95,22 @@ a:hover, a:focus-visible { color: var(--accent-deep); }
 }
 
 .wordmark {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
   color: var(--ink);
   text-decoration: none;
-  line-height: 1.2;
-  padding: 0.5rem 0;
+  line-height: 0;
+  padding: 0;
 }
 
-.wordmark:hover, .wordmark:focus-visible { color: var(--accent); }
+.wordmark img {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+
+.wordmark:hover img,
+.wordmark:focus-visible img { opacity: 0.85; }
 
 .site-nav {
   display: flex;
@@ -1178,7 +1183,7 @@ details a { min-height: 24px; min-width: 0; }
 
 .how-it-reads {
   width: min(100% - 2.5rem, 40rem);
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;
 }
 .how-it-reads .lede { margin-top: 0.5rem; }
 

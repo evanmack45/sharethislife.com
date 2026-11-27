@@ -154,3 +154,17 @@ Shears recheck (11:06–11:16, against 50e741e) plus Dash 11:15 order, folded in
 Shears-method local measure at 390: sweep fold prose **29** (h1 7 + “Opening soon” 2 + paused-orders 15 + the waitlist label 5), mason 12+ 15, fold words 37, hero 0.351, total 427, wps 109, taps fail 0, overflow 0, logo=text-wordmark. At 1280: sweep prose 36, fold 73, lede top 1026 (below 800 and 900).
 
 Shots: `/workspace/mason/scan-pass-shots/order-1115/after-hero-stl-home-{390,1280}.png` and `shears-local3/`.
+
+## 2026-11-27 ~11:55 AM CT (Mason)
+
+Shears cut of c0834b9: italic Georgia text was not a lockup. Header lockup only, plus the optional vale lede replacement. After the NS sub-batch (`39da166`).
+
+- Used the existing site mark from `favicon.svg` (the burgundy rounded square with a cream bound page). Did not invent a new illustrative mark.
+- Typeset “Share This Life” beside that mark in self-hosted Libre Baskerville Regular. License: SIL Open Font License 1.1, `fonts/OFL-LibreBaskerville.txt` (Copyright 2012 The Libre Baskerville Project Authors, https://github.com/impallari/Libre-Baskerville; reserved font name Libre Baskerville). Files: `fonts/LibreBaskerville-Regular.ttf`, `fonts/LibreBaskerville-Regular.woff2`. The lettering is outlined in `img/lockup.svg` so the page does not load the font at runtime (body type stays system Georgia).
+- Replaced the italic text wordmark with that SVG on every page that had a header. Accessible name remains “Share This Life.” Header link hit area stays 48×48. No new copy.
+- Below-fold lede, word for word from the Shears cut: “Sit down with a parent or a grandparent for ten or twenty minutes, or use a recording you already have, and send it to us. Within 48 hours, you get back a finished chapter in that person’s own words: a PDF and an editable text file, with one free revision.” Lede stays below the fold.
+- Added 1rem of bottom margin on the below-fold `.how-it-reads` block so words/screen at 390 stays under 110 after the shorter lede (page height had tipped the 1-decimal screens rounding). Did not shrink the hero.
+
+`ORDERS_OPEN` remains false. Hidden pay button stays hidden. No Stripe URL in the HTML.
+
+Local Shears-method measure at 390: sweep prose 29, fold 34, hero **0.350926** (350×330, unchanged), total 421, wps 108, taps 0, overflow 0, logo=img-lockup. At 1280: sweep prose 36, fold 70. Pause box and waitlist stay in the first screen. Wordmark tap 223.5×48.
