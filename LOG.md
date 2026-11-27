@@ -138,3 +138,5 @@ Local measure after the move:
 - 1280×800: fold 76, fold-prose 28 (13-word offer item + the 15-word paused line). Lede is below the fold.
 
 Before shots (live, pre-change): `/workspace/mason/scan-pass-shots/order-1115/before-stl-home-{390,1280}.png`. After (local): `/workspace/mason/scan-pass-shots/order-1115/after-stl-home-{390,1280}.png`.
+
+Follow-up in the same order: raised `.hero-offer` desktop margin-bottom from 8rem to 16rem so the lede stays below a 1440×900 fold (visual-qa-gate desktop). Set `.fine a` to min-height 24px for the "Privacy, consent, and refunds" link (Shears 24px secondary-link rule). `ORDERS_OPEN` still false.
