@@ -115,3 +115,11 @@ Per Shears/Dash 9:52 ruling: removed the "Order a chapter" nav link on every pag
 
 ## 2026-11-27 10:38 AM CT (Mason)
 Shears nits: "An order includes" -> "Each chapter comes with"; "18 or older to order." -> "18 or older." on all pages. Copy only.
+
+## 2026-11-27 (CT) Visual sweep #2 (taps and visuals only)
+
+- Did not recut copy. `ORDERS_OPEN` remains false in `js/config.js`. No Stripe URL in the HTML. The hidden pay button was not turned on.
+- Added a picture of the existing sample chapter in the home fold (`img/sample-chapter.webp` and `img/sample-chapter-2x.webp`), cropped from the live sample page "We've Been in Woody Ever Since." The image is a link to `/sample/`.
+- Taps: wordmark, header nav, main buttons, footer links, and "Read a sample chapter" are min-height 48px. Smallest measured tap on the home page at 390 is 73px, 0 fails.
+- No official Ansel lockup or press-kit mark was available; the text wordmark was left in place (no invented logo).
+- Local visual-qa-gate on the home page: PASS (no P0). Shots: `/workspace/mason/sweep-qa/sweep-stl-home-{390,1280}.png`.

@@ -1151,3 +1151,24 @@ label.consent-label input[type="checkbox"] {
 .opening-box .btn {
   width: 100%;
 }
+
+
+/* visual-sweep-2026-11-27: 48px taps for nav and main buttons; chapter preview in the home fold */
+.wordmark, .site-nav a, .btn, .site-footer a, .offer-card .fine a, .hero-chapter a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.site-nav a, .wordmark { min-width: 48px; }
+.btn, .offer-card .btn { min-height: 48px; }
+.hero-chapter { margin: 0 0 1.25rem; }
+.hero-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--card);
+}
+details a { min-height: 24px; min-width: 0; }
